@@ -96,13 +96,11 @@ function generatePassword() {
   } else {
     return null;
   }
-  console.log("userChoice =" + userChoice);
-  if (userChoice.length === 0) {
-    return;
-  }
-  for (i = 0; i <= userChoice; i++) {
-    var randomIndex = Math.floor(Math.random() * userChoice);
-    var random = userChoice.charAt(randomIndex);
+  console.log("user choice = " + userChoice);
+  if (userChoice.length === 0) return;
+  for (i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * userChoice.length);
+    var random = userChoice[randomIndex];
     finalPassword = finalPassword.concat(random);
   }
   return finalPassword;

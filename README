@@ -1,5 +1,6 @@
 To generate a random password first we must create an array for each of the following charactersitics of the password. So I created an array for each of uppercase letters, lowercase letters, numbers, and special characters. 
 We had to create the function generatePassword using prompts and confirm windows.
 First we create a variable for password length, with the caviat that it must be between 8 and 128 characters. This was made as a prompt window asking the user to type in their desired number of characters for their password. We created an alert in case the user tried to select a number less than 8 or greater than 128. 
-For lowercase letters, uppercase letters, numbers, and special characters we used the (confirm) window since they are binary questions.
+For lowercase letters, uppercase letters, numbers, and special characters we used the (confirm) window since they are binary questions. We add if statements in case the user wants to cancel and exit out of the generator, producing a null response.
 We used concat to combine each array from the previous one, thus building the portfolio of characters from which to choose the password from. 
+We then use a for loop with a random index to create a random character generation with the caviat of the length of the password the user wants. We then return finalPassword.
